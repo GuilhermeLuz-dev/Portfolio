@@ -171,6 +171,13 @@ header {
   display: flex;
   justify-content: center;
   padding: 10px;
+  overflow: hidden;
+}
+#content{
+  position: absolute;
+  width: 300%;
+  height: 80%;
+  /* border: 2px solid; */
 }
 #controle{
   position: absolute;
@@ -186,11 +193,12 @@ header {
   font-size: 30px;
   text-align:start;
   padding: 15px;
-  width: 90%;
+  width: 33.3333333333%;
   height: 90%;
   background-color: #00a9d4;
   border-radius: 10px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+  /* box-shadow: none 10px 10px rgba(0, 0, 0, 0.7) ; */
+  display: inline-block;
 }
 .boxTexto > p {
   margin-left: 15px;
