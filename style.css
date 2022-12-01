@@ -162,22 +162,29 @@ header {
 }
 
 .boxBiografia{
-  position: relative;
   box-sizing: border-box;
   width: 45%;
   height: 100%;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   display: inline-block;
   display: flex;
-  justify-content: center;
   padding: 10px;
-  overflow: hidden;
+  
 }
+.biografia{
+  overflow: hidden;
+  position: relative;
+}
+
 #content{
   position: absolute;
-  width: 300%;
+  width: 2108px;
   height: 80%;
-  /* border: 2px solid; */
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  box-sizing: border-box;
+
 }
 #controle{
   position: absolute;
@@ -186,35 +193,49 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  /* border: 2px solid; */
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%);
 }
+.boxButton{
+  border: 2px solid #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: .6s;
+}
+.boxButton:hover{
+  background-color: #fff;
+}
+
 .boxTexto{
   box-sizing: border-box;
   font-size: 30px;
   text-align:start;
   padding: 15px;
-  width: 33.3333333333%;
+  width:700px;
   height: 90%;
-  background-color: #00a9d4;
   border-radius: 10px;
   /* box-shadow: none 10px 10px rgba(0, 0, 0, 0.7) ; */
   display: inline-block;
+  transition: 1s;
 }
-.boxTexto > p {
-  margin-left: 15px;
+.s1{
+  background-color: green;
 }
-.boxButton{
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  display: inline-block;
-  border-radius: 50%;
+.s2{
+  background-color: #1c0021;
 }
-
-#biografiaContainer{
-
+.s3{
+  background-color: aquamarine;
 }
 
-
-
+[checked]{
+  background-color: red;
+      
+}
+#slide2:checked ~ .s1{
+  margin-left: -700px;
+}
 
