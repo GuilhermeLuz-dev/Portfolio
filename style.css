@@ -156,16 +156,19 @@ header {
 .sobreMim{
   display: flex;
   justify-content: space-around;
-  background-color: #1c3166;
+  background: #1c3166;
   width: 100%;
   height: 600px;
+  transition: 1s;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+
 }
 
 .boxBiografia{
   box-sizing: border-box;
   width: 45%;
   height: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: inline-block;
   display: flex;
   padding: 10px;
@@ -174,16 +177,25 @@ header {
 .biografia{
   overflow: hidden;
   position: relative;
+  background-color:#142246;
+  height: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+  transition: 1s;
 }
 
 #content{
   position: absolute;
-  width: 2108px;
+  width: 300%;
   height: 80%;
   top: 50%;
   transform: translateY(-50%);
   overflow: hidden;
   box-sizing: border-box;
+  display: flex;
+
 
 }
 #controle{
@@ -203,39 +215,47 @@ header {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  transition: .6s;
+  transition: 1s;
 }
 .boxButton:hover{
   background-color: #fff;
 }
-
+.slide1{
+  background-color: #fff;
+}
 .boxTexto{
   box-sizing: border-box;
-  font-size: 30px;
-  text-align:start;
+  font-size: 28px;
   padding: 15px;
-  width:700px;
+  width:32%;
   height: 90%;
   border-radius: 10px;
-  /* box-shadow: none 10px 10px rgba(0, 0, 0, 0.7) ; */
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
   display: inline-block;
   transition: 1s;
 }
+.boxTexto h2{
+  margin-bottom: 15px;
+}
 .s1{
-  background-color: green;
+  background-color: #027fe9;
 }
-.s2{
-  background-color: #1c0021;
-}
-.s3{
-  background-color: aquamarine;
+.imagens{
+  position: relative;
+
 }
 
-[checked]{
-  background-color: red;
-      
+.imgBio{
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) ;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+
+  
 }
-#slide2:checked ~ .s1{
-  margin-left: -700px;
-}
+
 
