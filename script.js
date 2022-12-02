@@ -21,7 +21,7 @@ const efeitoSlide1 = ()=>{
 }
 const efeitoSlide2 = ()=>{
     console.log("teste");
-    s1.style.marginLeft = "-32%";
+    s1.style.marginLeft = "-34%";
     s2.style.backgroundColor = "#800909";
     biografia.style.backgroundColor = "#4d1a1a";
     sobreMim.style.backgroundColor = "#332222";
@@ -32,7 +32,7 @@ const efeitoSlide2 = ()=>{
 }
 const efeitoSlide3 = ()=>{
     console.log("teste");
-    s1.style.marginLeft ="-64%";
+    s1.style.marginLeft ="-68%";
     s3.style.backgroundColor = "#4f784e";
     biografia.style.backgroundColor = "#2d5e4c";
     sobreMim.style.backgroundColor = "#13444d";

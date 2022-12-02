@@ -171,7 +171,7 @@ header {
   /* border: 2px solid black; */
   display: inline-block;
   display: flex;
-  padding: 10px;
+  /* padding: 10px; */
   
 }
 .biografia{
@@ -227,7 +227,7 @@ header {
   box-sizing: border-box;
   font-size: 28px;
   padding: 15px;
-  width:32%;
+  width:34%;
   height: 90%;
   border-radius: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
@@ -240,9 +240,12 @@ header {
 .s1{
   background-color: #027fe9;
 }
+
 .imagens{
   position: relative;
-
+}
+.imagens h1{
+  margin: 15px;
 }
 
 .imgBio{
@@ -254,8 +257,33 @@ header {
   left:50%;
   transform:translate(-50%, -50%) ;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
-
-  
 }
-
+#projetos{
+  margin-top: 100px;
+  border: 2px solid;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrossel{
+  overflow: hidden;
+  max-width: 70%;
+  width: 70%;
+  border: 2px solid;
+  height: 500px;
+  padding: 10px;
+}
+.projetos{
+  width:500% ;
+  height: 90%;
+  border: 2px solid;
+}
+.projeto{
+  display: inline-block;
+  margin-left: 5px;
+  width: 10%;
+  height: 90%;
+  border: 2px solid;
+}
 
