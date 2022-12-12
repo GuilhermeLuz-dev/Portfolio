@@ -3,13 +3,15 @@
   padding: 0;
   font-family: "Roboto", sans-serif, Arial, Helvetica;
 }
+
 body {
   height: 100vh;
   background: linear-gradient(90deg, #111, 80%, #1c0021);
   color: white;
 }
-nav{
-  position:fixed;
+
+nav {
+  position: fixed;
   top: 0;
   font-size: 20px;
   width: 100%;
@@ -22,7 +24,7 @@ nav{
 }
 
 
-nav > ul > li{
+nav>ul>li {
   width: 110px;
   height: 50px;
   line-height: 50px;
@@ -31,7 +33,8 @@ nav > ul > li{
   margin: 0 15px;
   cursor: pointer;
 }
-nav > ul > li:hover{
+
+nav>ul>li:hover {
   background-color: rgba(255, 250, 250, 0.219);
 }
 
@@ -50,6 +53,7 @@ nav > ul > li:hover{
     transform: translateY(-30px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0px);
     opacity: 1;
@@ -71,34 +75,37 @@ header {
   height: 700px;
   font-size: 30px;
 }
-.bio > h1 {
+
+.bio>h1 {
   /* opacity: 0; */
   animation: appear 1s forwards;
 }
-.bio > p {
+
+.bio>p {
   /* opacity: 0; */
   animation: appear 1s forwards 1s;
   margin-top: 15px;
 }
-.bio > button{
+
+.bio>button {
   width: 200px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(90deg, #111,20%,#1c0021);
+  background: linear-gradient(90deg, #111, 20%, #1c0021);
   color: white;
   margin: 50px 10px 0px 0px;
   padding: 30px;
   cursor: pointer;
   transition: all 1s;
-  
+
 }
 
-.bio > button:hover{
+.bio>button:hover {
   width: 250px;
   background: rgba(255, 250, 250, 0.219);
 
-  
-  
+
+
 }
 
 .perfil {
@@ -109,15 +116,18 @@ header {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+
 }
-.perfil > .imagePerfil {
+
+.perfil>.imagePerfil {
   width: 400px;
   height: 400px;
   background-color: #fff;
   border-radius: 50%;
   overflow: hidden;
 }
-.perfil > .imagePerfil > img {
+
+.perfil>.imagePerfil>img {
   width: 100%;
   transform: translateY(30px);
 }
@@ -127,44 +137,49 @@ header {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
- 
+
 }
 
-.redes > img {
+.redes>img {
   opacity: 0;
-  width: 40px; 
+  width: 40px;
   transition: all 1s;
 }
+
 .github {
   animation: appear 1s forwards;
 }
+
 .linkedin {
   animation: appear 1s forwards 0.5s;
 }
+
 .email {
   animation: appear 1s forwards 1s;
 }
+
 .insta {
   animation: appear 1s forwards 1.5s;
 }
+
 .whats {
   animation: appear 1s forwards 2s;
 }
 
 /* Sobre Mim */
 
-.sobreMim{
+.sobreMim {
   display: flex;
   justify-content: space-around;
   background: #1c3166;
   width: 100%;
   height: 600px;
   transition: 1s;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
 
 }
 
-.boxBiografia{
+.boxBiografia {
   box-sizing: border-box;
   width: 45%;
   height: 100%;
@@ -172,21 +187,22 @@ header {
   display: inline-block;
   display: flex;
   /* padding: 10px; */
-  
+
 }
-.biografia{
+
+.biografia {
   overflow: hidden;
   position: relative;
-  background-color:#142246;
+  background-color: #142246;
   height: 90%;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 10px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
   transition: 1s;
 }
 
-#content{
+#content {
   position: absolute;
   width: 300%;
   height: 80%;
@@ -198,7 +214,8 @@ header {
 
 
 }
-#controle{
+
+#controle {
   position: absolute;
   bottom: 10px;
   width: 20%;
@@ -210,80 +227,141 @@ header {
   bottom: 8%;
   transform: translate(-50%);
 }
-.boxButton{
+
+.boxButton {
   border: 2px solid #fff;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   transition: 1s;
 }
-.boxButton:hover{
+
+.boxButton:hover {
   background-color: #fff;
 }
-.slide1{
+
+.slide1 {
   background-color: #fff;
 }
-.boxTexto{
+
+.boxTexto {
   box-sizing: border-box;
   font-size: 28px;
   padding: 15px;
-  width:34%;
+  width: 34%;
   height: 90%;
   border-radius: 10px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
   display: inline-block;
   transition: 1s;
 }
-.boxTexto h2{
+
+.boxTexto h2 {
   margin-bottom: 15px;
 }
-.s1{
+
+.s1 {
   background-color: #027fe9;
 }
 
-.imagens{
+.imagens {
   position: relative;
 }
-.imagens h1{
+
+.imagens h1 {
   margin: 15px;
 }
 
-.imgBio{
+.imgBio {
   border-radius: 50%;
   width: 300px;
   height: 300px;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%) ;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7) ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
 }
-#projetos{
+
+#projetos {
+  position: relative;
   margin-top: 100px;
   border: 2px solid;
   height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.carrossel{
-  overflow: hidden;
-  max-width: 70%;
-  width: 70%;
-  border: 2px solid;
-  height: 500px;
-  padding: 10px;
-}
-.projetos{
-  width:500% ;
-  height: 90%;
-  border: 2px solid;
-}
-.projeto{
-  display: inline-block;
-  margin-left: 5px;
-  width: 10%;
-  height: 90%;
-  border: 2px solid;
+
 }
 
+.container-carrossel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  border: none;
+}
+
+.arrow-left {
+  left: 0;
+  /* background: linear-gradient(to left,transparent 0%, black 200%); */
+}
+
+.arrow-right {
+  /* background: linear-gradient(to right,transparent 0%, black 200%); */
+  right: 0;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+.gallery-wrapper::-webkit-scrollbar{
+  display: none;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+  transition: all 1s ease-in-out;
+}
+.projeto {
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+  flex-shrink:0;
+  opacity: 0.6;
+  transition: all 1s ease-in-out;
+  background-color:#142246;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+.projeto img{
+  width: 100px;
+}
+.faixa{
+  background-color: #fff;
+  width: 200%;
+  height: 50px;
+  transform: rotate(55deg);
+  position: absolute;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.current-projeto{
+  opacity: 1;
+}
