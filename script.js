@@ -9,9 +9,11 @@ let sobreMim = document.querySelector(".sobreMim");
 let imgBio = document.querySelector(".imgBio");
 
 const controls = document.querySelectorAll('.control');
-const items = document.querySelectorAll('.projeto');
+const projeto = document.querySelectorAll('.projeto');
 let currentItem = 0;
-let maxItem = items.length;
+
+let descricao = document.querySelectorAll(".descricao");
+
 
 
 const efeitoSlide1 = () => {
@@ -52,35 +54,51 @@ slide1.addEventListener("click", efeitoSlide1);
 slide2.addEventListener("click", efeitoSlide2);
 slide3.addEventListener("click", efeitoSlide3);
 
-
-
-
+let margin = 0; 
+let index = 1;
 controls.forEach(control =>{
-  control.addEventListener('click', ()=>{
-    
-    const isleft = control.classList.contains("arrow-left");
-   
+  let isleft = control.classList.contains('arrow-left');
+  control.addEventListener("click", ()=>{
     if(isleft){
-      currentItem--; 
+      if(margin >= 0){
+        projeto.forEach(projeto =>{
+          projeto.style.animation = "limited1 0.5s";
+          setTimeout(()=>{
+            projeto.style.animation = "none";
+          }, 500)
+        })
+     
+      }else{
+        margin += 335
+        console.log(margin)
+        projeto[0].style.marginLeft = `${margin}px`;
+      }
     }else{
-      currentItem++;
+      if(margin <= -670){
+        projeto.forEach(projeto =>{
+          projeto.style.animation = "limited2 0.5s";
+          setTimeout(()=>{
+            projeto.style.animation = "none";
+          }, 500)
+        })
+      }else{
+        margin += -335;
+        console.log(margin)
+        projeto[0].style.marginLeft = `${margin}px`;
+
+      }
     }
-    if(currentItem >= maxItem){
-      currentItem = 0
-    }
-    if(currentItem < 0){
-      currentItem = maxItem - 1;
-    }
-    console.log("control", isleft, currentItem);
-    
-    items.forEach(item =>{
-      item.classList.remove('current-projeto')
-    })
-    items[currentItem].scrollIntoView({
-      inline: "center",
-      behavior:"smooth",
-      block:"nearest"
-    })
-    items[currentItem].classList.add("current-projeto")
   })
 })
+
+projeto.forEach(projeto =>{
+  projeto.addEventListener("mouseover",()=>{
+    projeto.lastElementChild.style.bottom = "0";
+  })
+})
+projeto.forEach(projeto =>{
+  projeto.addEventListener("mouseout",()=>{
+    projeto.lastElementChild.style.bottom = "-60px";
+  })
+})
+
