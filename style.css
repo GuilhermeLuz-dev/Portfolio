@@ -42,7 +42,6 @@ nav>ul>li:hover {
 .container {
   max-width: 100%;
   overflow: hidden;
-  height: 300%;
   margin-top: 2%;
 }
 
@@ -78,12 +77,12 @@ header {
 }
 
 .bio>h1 {
-  /* opacity: 0; */
+  opacity: 0;
   animation: appear 1s forwards;
 }
 
 .bio>p {
-  /* opacity: 0; */
+  opacity: 0;
   animation: appear 1s forwards 1s;
   margin-top: 15px;
 }
@@ -174,9 +173,18 @@ header {
   justify-content: space-around;
   background: #1c3166;
   width: 100%;
-  height: 600px;
+  height: 750px;
   transition: 1s;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+
+}
+.titulo{
+  margin: auto;
+  position: absolute;
+  padding: 10px;
+  font-size: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 
 }
 
@@ -184,18 +192,15 @@ header {
   box-sizing: border-box;
   width: 45%;
   height: 100%;
-  /* border: 2px solid black; */
   display: inline-block;
   display: flex;
-  /* padding: 10px; */
-
 }
 
 .biografia {
   overflow: hidden;
   position: relative;
   background-color: #142246;
-  height: 90%;
+  height: 500px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 10px;
@@ -235,6 +240,7 @@ header {
   height: 20px;
   border-radius: 50%;
   transition: 1s;
+  cursor: pointer;
 }
 
 .boxButton:hover {
@@ -269,10 +275,6 @@ header {
   position: relative;
 }
 
-.imagens h1 {
-  margin: 15px;
-}
-
 .imgBio {
   border-radius: 50%;
   width: 300px;
@@ -287,12 +289,7 @@ header {
 #projetos {
   position: relative;
   margin-top: 100px;
-
   height: 700px;
-
-}
-#projetos h1{
-  margin: 15px;
 }
 
 .container-carrossel {
@@ -311,7 +308,9 @@ header {
   width: 60px;
   border: none;
   cursor: pointer;
+  opacity: 0.4;
 }
+
 button > img {
   width: 50px;
   color: white;
@@ -321,11 +320,16 @@ button > img {
   left: 0;
   background: linear-gradient(to left,transparent 0%, black 200%);
 }
-
+.arrow-left:hover{
+  opacity: 1;
+  }
 .arrow-right {
   background: linear-gradient(to right,transparent 0%, black 200%);
   right: 0;
 }
+.arrow-right:hover{
+  opacity: 1;
+  }
 .arrow-right > img{
   transform: rotate(180deg);
 }
@@ -366,6 +370,7 @@ button > img {
   position: relative;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
 }
 .projeto:hover{
   border: 4px solid white;
@@ -392,10 +397,73 @@ button > img {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
-  bottom: -60px;
+  bottom: -90px;
   padding: 10px;
   text-align: center;
   font-weight:400;
   transition: .5s ease-in-out;
+  font-size: 20px;
+  width: 100%;
 }
 
+#habilidades{
+  height: 1200px;
+  position: relative;
+  background-color: #1c3166;
+  margin-top: 100px;
+}
+#habilidades h2{
+  margin-top: 30px;
+}
+.linguagens{
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  gap: 25px;
+  grid-template: auto auto/auto auto auto;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+ 
+}
+.linguagem{
+  display: inline-block;
+  width: 320px;
+  height: 420px;
+  background-color: #3d0a49;
+  border-radius: 10px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s ease-in-out;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+}
+.linguagem:hover{
+  background-color: #561066;
+  top: -20px;
+
+}
+.l1{
+  animation: appear 1s ease-in-out .5s forwards;
+}
+.l2{
+  animation: appear 1s ease-in-out 1s forwards;
+}
+.l3{
+  animation: appear 1s ease-in-out 1.5s forwards;
+}
+.l4{
+  animation: appear 1s ease-in-out 2s forwards
+}
+
+.linguagem img{
+  width: 100px;
+}

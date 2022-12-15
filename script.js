@@ -10,6 +10,7 @@ let imgBio = document.querySelector(".imgBio");
 
 const controls = document.querySelectorAll('.control');
 const projeto = document.querySelectorAll('.projeto');
+const card = document.querySelectorAll('.card')
 let currentItem = 0;
 
 let descricao = document.querySelectorAll(".descricao");
@@ -91,14 +92,14 @@ controls.forEach(control =>{
   })
 })
 
-projeto.forEach(projeto =>{
-  projeto.addEventListener("mouseover",()=>{
-    projeto.lastElementChild.style.bottom = "0";
+card.forEach(card =>{
+  card.addEventListener("mouseover",()=>{
+    card.lastElementChild.style.bottom = "0";
   })
 })
-projeto.forEach(projeto =>{
-  projeto.addEventListener("mouseout",()=>{
-    projeto.lastElementChild.style.bottom = "-60px";
+card.forEach(card =>{
+  card.addEventListener("mouseout",()=>{
+    card.lastElementChild.style.bottom = "-90px";
   })
 })
 
