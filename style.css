@@ -4,6 +4,12 @@
   padding: 0;
   font-family: "Roboto", sans-serif, Arial, Helvetica;
 }
+a{
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
 
 body {
   height: 100vh;
@@ -18,14 +24,14 @@ nav {
   width: 100%;
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   background: linear-gradient(90deg, #1c0021, #111);
 
 }
 
 
-nav>ul>li {
+nav  a {
   width: 110px;
   height: 50px;
   line-height: 50px;
@@ -35,7 +41,7 @@ nav>ul>li {
   cursor: pointer;
 }
 
-nav>ul>li:hover {
+nav a:hover {
   background-color: rgba(255, 250, 250, 0.219);
 }
 
@@ -43,6 +49,40 @@ nav>ul>li:hover {
   max-width: 100%;
   overflow: hidden;
   margin-top: 2%;
+}
+@keyframes jumped {
+  50%{bottom: 20px;}
+  100%{bottom:15px;}
+  
+}
+.contato{
+  position: fixed;
+  /* position: absolute; */
+  background-color:#40ffdc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: jumped 1s ease-in-out  infinite;
+}
+.contato img{
+  width: 45px;
+}
+
+.boxContato > a > img{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  opacity: 0;
+  transition: all 1s;
+
 }
 
 /* Estilizando o header */
@@ -62,17 +102,17 @@ nav>ul>li:hover {
 
 /* Seções */
 header {
+  height: 100vh;
   position: relative;
   margin: auto;
-  top: 50px;
   width: 90%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .bio {
   width: 45%;
-  height: 700px;
   font-size: 30px;
 }
 
@@ -85,13 +125,14 @@ header {
   opacity: 0;
   animation: appear 1s forwards 1s;
   margin-top: 15px;
+  color: #40ffdc;
 }
 
 .bio>button {
   width: 200px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(90deg, #111, 20%, #1c0021);
+  background: linear-gradient(#1c3166, #111);
   color: white;
   margin: 50px 10px 0px 0px;
   padding: 30px;
@@ -111,15 +152,24 @@ header {
 .perfil {
   animation: appear 0.5s forwards;
   width: 45%;
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+}
+.boxPerfil{
+  height: 600px;
+  background: linear-gradient(#1c3166, #111);
+  padding:20px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
 }
 
-.perfil>.imagePerfil {
+.imagePerfil {
   width: 400px;
   height: 400px;
   background-color: #fff;
@@ -127,13 +177,13 @@ header {
   overflow: hidden;
 }
 
-.perfil>.imagePerfil>img {
+.imagePerfil img {
   width: 100%;
   transform: translateY(30px);
 }
 
 .redes {
-  width: 70%;
+  width: 100%;
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
@@ -185,6 +235,7 @@ header {
   font-size: 40px;
   left: 50%;
   transform: translateX(-50%);
+  color: #40ffdc;
 
 }
 
@@ -228,7 +279,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* border: 2px solid; */
   left: 50%;
   bottom: 8%;
   transform: translate(-50%);
@@ -407,7 +457,7 @@ button > img {
 }
 
 #habilidades{
-  height: 1200px;
+  height: 1100px;
   position: relative;
   background-color: #1c3166;
   margin-top: 100px;
@@ -466,4 +516,31 @@ button > img {
 
 .linguagem img{
   width: 100px;
+}
+
+footer{
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.assinatura{
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}
+.assinatura h2{
+  margin-bottom: 15px;
+}
+.assinatura p{
+  margin-bottom: 15px;
+  color:#40ffdc;
+}
+.assinatura .redes{
+  margin: auto;
+
+}
+.assinatura img{
+  width: 30px;
 }

@@ -11,9 +11,11 @@ let imgBio = document.querySelector(".imgBio");
 const controls = document.querySelectorAll('.control');
 const projeto = document.querySelectorAll('.projeto');
 const card = document.querySelectorAll('.card')
-let currentItem = 0;
 
 let descricao = document.querySelectorAll(".descricao");
+
+const contato = document.querySelector(".contato")
+const imgContato = document.querySelectorAll(".imgContato")
 
 
 
@@ -102,4 +104,35 @@ card.forEach(card =>{
     card.lastElementChild.style.bottom = "-90px";
   })
 })
+
+let aux = 95;
+const aparecerRedes = ()=>{
+  for(let i = 0 ; i < imgContato.length; i++){
+    imgContato[i].style.opacity = '1';
+    imgContato[i].style.bottom = `${aux}px`;
+    aux += 95;
+  }
+  contato.setAttribute('onclick', 'desaparecerRedes()')
+
+  
+}
+
+
+const desaparecerRedes = ()=>{
+  
+  for(let i = 0 ; i < imgContato.length; i++){
+    imgContato[i].style.opacity = "0"
+    imgContato[i].style.bottom = "15px";
+    aux = 95;
+    
+  }
+  console.log("teste")
+  contato.setAttribute('onclick', 'aparecerRedes()')
+
+ 
+}
+// contato.addEventListener('click', aparecerRedes)
+
+
+
 
