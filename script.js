@@ -126,12 +126,8 @@ const desaparecerRedes = ()=>{
     aux = 95;
     
   }
-  console.log("teste")
-  contato.setAttribute('onclick', 'aparecerRedes()')
-
- 
 }
-// contato.addEventListener('click', aparecerRedes)
+
 
 
 

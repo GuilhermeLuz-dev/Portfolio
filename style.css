@@ -69,8 +69,9 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   animation: jumped 1s ease-in-out  infinite;
+  cursor: pointer;
 }
-.contato img{
+.contato  img{
   width: 45px;
 }
 
@@ -190,12 +191,17 @@ header {
 
 }
 
-.redes>img {
+.redes a img {
+  position: relative;
   opacity: 0;
   width: 40px;
   transition: all 1s;
 }
+.rede:hover{
+  top: -5px;
+  border: 2px solid;
 
+}
 .github {
   animation: appear 1s forwards;
 }
