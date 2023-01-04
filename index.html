@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Guilherme.Dev</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,22 +13,22 @@
 </head>
 
 <body>
-  <div class="container">
+  <main>
     <header>
-      <div class="bio">
+      <section class="introducao">
         <h1>
           Olá, tudo bem? Sou Guilherme Luz Rocha futuro desenvolvedor de
           software
         </h1>
         <p>
-          Baiano, Cursando Análise e Desenvolvimento de Sistemas e iniciando a
-          caminhada no universo da tecnologia atravéz do Desenvolvimento Web
+          Cursando o terceiro semestre em Análise e Desenvolvimento de Sistemas e iniciando a
+          caminhada no mundo da programação atravéz do Desenvolvimento Web.
         </p>
         <button>ACESSAR CV</button>
         <button>BAIXAR CV</button>
-      </div>
+      </section>
 
-      <div class="perfil">
+      <section class="perfil">
         <div class="boxPerfil">
           <div class="imagePerfil">
             <img src="./images/perfil.png" alt="" />
@@ -39,23 +39,24 @@
                 alt="GitHub" /></a>
             <a href="https://www.linkedin.com/in/guilherme-luz-roch-3a1511234/"><img class="linkedin rede"
                 src="./images/linkedin.png" alt="linkedin" /></a>
-            <a href="mailto:luzguilherme.dev@gmail.com"><img class="email rede" src="./images/email.png" alt="gmail" /></a>
+            <a href="mailto:luzguilherme.dev@gmail.com"><img class="email rede" src="./images/email.png"
+                alt="gmail" /></a>
             <a href="https://www.instagram.com/guilherme_luzr/"><img class="insta rede" src="./images/instagram.png"
                 alt="instagram" /></a>
             <a href="https://api.whatsapp.com/send?phone=+557799287805&text=sua%20mensagem"><img class="whats rede"
                 src="./images/whatsapp.png" alt="whatsapp" /></a>
           </div>
         </div>
-      </div>
+      </section>
     </header>
 
-    <div class="sobreMim">
+    <section class="biografia">
       <h1 class="titulo">Biografia</h1>
-      <div class="boxBiografia imagens">
+      <div class="boxBiografia gifs">
         <img class="imgBio" src="./images/livro.gif" alt="Gif" />
       </div>
-      <div class="boxBiografia biografia">
-        <div id="content">
+      <div class="boxBiografia textos">
+        <div class="textoConteudo">
           <div class="boxTexto s1">
             <h2>Formação</h2>
             <p>
@@ -89,19 +90,19 @@
           </div>
         </div>
 
-        <div id="controle">
+        <div class="controle">
           <div class="boxButton slide1"></div>
           <div class="boxButton slide2"></div>
           <div class="boxButton slide3"></div>
         </div>
       </div>
-    </div>
-    <section id="projetos">
+    </section>
+    <section class="projetos">
       <h2 class="titulo">Projetos</h2>
       <div class="container-carrossel">
 
-        <div class="gallery-wrapper">
-          <div class="gallery">
+        <div class="container-galeria">
+          <div class="galeria">
             <div class="card projeto p1 "><img src="./images/calculadora.png" alt="calculadora">
               <div class="descricao">
                 <p>Calculadora simples com JavaScript, css e Html</p>
@@ -113,21 +114,21 @@
               </div>
             </div>
             <div class="card projeto p3 ">
-              <div class="faixa">Aguarde
+              <div class="faixaAguarde">Aguarde
               </div>
               <div class="descricao">
                 <p>Novos projetos estão sendo criados, Agradeço a compreenção.</p>
               </div>
             </div>
             <div class="card projeto p4 ">
-              <div class="faixa">Aguarde
+              <div class="faixaAguarde">Aguarde
               </div>
               <div class="descricao">
                 <p>Novos projetos estão sendo criados, Agradeço a compreenção.</p>
               </div>
             </div>
             <div class="card projeto p5 ">
-              <div class="faixa">Aguarde
+              <div class="faixaAguarde">Aguarde
               </div>
               <div class="descricao">
                 <p>Novos projetos estão sendo criados, Agradeço a compreenção.</p>
@@ -140,7 +141,7 @@
       </div>
     </section>
     <section>
-      <div id="habilidades">
+      <div class="habilidades">
         <h2 class="titulo">Habilidades</h2>
         <div class="linguagens">
           <div class="card linguagem l1 "><img src="./images/java-script.png" alt="JavaScript">
@@ -155,10 +156,10 @@
           <div class="card linguagem l4">
             <div class="descricao">Aguarde</div>
           </div>
-          <div class="card linguagem l4">
+          <div class="card linguagem l5">
             <div class="descricao">Aguarde</div>
           </div>
-          <div class="card linguagem l4">
+          <div class="card linguagem l6">
             <div class="descricao">Aguarde</div>
           </div>
 
@@ -166,42 +167,43 @@
 
       </div>
     </section>
-
-  </div>
-  <nav>
-    <a>Início</a>
-    <a href="#">Sobre mim</a>
-    <a>Projetos</a>
-    <a>Habilidades</a>
-  </nav>
-  <footer>
-    <div class="assinatura">
-      <h2>Guilherme Luz Rocha</h2>
-      <p>Desenvolvedor Web</p>
-      <div class="redes">
-        <a href="https://github.com/GuilhermeLuz-dev"><img class="github" src="./images/github.png" alt="GitHub" /></a>
-        <a href="https://www.linkedin.com/in/guilherme-luz-roch-3a1511234/"><img class="linkedin"
-            src="./images/linkedin.png" alt="linkedin" /></a>
-        <a href="mailto:luzguilherme.dev@gmail.com"><img class="email" src="./images/email.png" alt="gmail" /></a>
-        <a href="https://www.instagram.com/guilherme_luzr/"><img class="insta" src="./images/instagram.png"
-            alt="instagram" /></a>
-        <a href="https://api.whatsapp.com/send?phone=+557799287805&text=sua%20mensagem"><img class="whats"
-            src="./images/whatsapp.png" alt="whatsapp" /></a>
+    <footer>
+      <div class="assinatura">
+        <h2>Guilherme Luz Rocha</h2>
+        <p>Desenvolvedor Web</p>
+        <div class="redes">
+          <a href="https://github.com/GuilhermeLuz-dev"><img class="github" src="./images/github.png"
+              alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/guilherme-luz-roch-3a1511234/"><img class="linkedin"
+              src="./images/linkedin.png" alt="linkedin" /></a>
+          <a href="mailto:luzguilherme.dev@gmail.com"><img class="email" src="./images/email.png" alt="gmail" /></a>
+          <a href="https://www.instagram.com/guilherme_luzr/"><img class="insta" src="./images/instagram.png"
+              alt="instagram" /></a>
+          <a href="https://api.whatsapp.com/send?phone=+557799287805&text=sua%20mensagem"><img class="whats"
+              src="./images/whatsapp.png" alt="whatsapp" /></a>
+        </div>
       </div>
-    </div>
-  </footer>
-  <div class="boxContato">
-    <a href="https://github.com/GuilhermeLuz-dev"><img class="imgContato" src="./images/github.png" alt="GitHub"></a>
-    <a href="https://www.linkedin.com/in/guilherme-luz-roch-3a1511234/"><img class=" imgContato "
-        src="./images/linkedin.png" alt="linkedin" /></a>
-    <a href="mailto:luzguilherme.dev@gmail.com"><img class=" imgContato " src="./images/email.png" alt="gmail" /></a>
-    <a href="https://www.instagram.com/guilherme_luzr/"><img class=" imgContato" src="./images/instagram.png"
-        alt="instagram" /></a>
-    <a href="https://api.whatsapp.com/send?phone=+557799287805&text=sua%20mensagem"><img class=" imgContato"
-        src="./images/whatsapp.png" alt="whatsapp" /></a>
-    <div onclick="aparecerRedes()" class="contato"><img src="./images/bater-papo.png" alt="Contato"></div>
-  </div>
-  </div>
+      <div class="boxContato">
+        <a href="https://github.com/GuilhermeLuz-dev"><img class="imgContato" src="./images/github.png"
+            alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/guilherme-luz-roch-3a1511234/"><img class=" imgContato "
+            src="./images/linkedin.png" alt="linkedin" /></a>
+        <a href="mailto:luzguilherme.dev@gmail.com"><img class="imgContato" src="./images/email.png" alt="gmail" /></a>
+        <a href="https://www.instagram.com/guilherme_luzr/"><img class="imgContato" src="./images/instagram.png"
+            alt="instagram" /></a>
+        <a href="https://api.whatsapp.com/send?phone=+557799287805&text=sua%20mensagem"><img class="imgContato"
+            src="./images/whatsapp.png" alt="whatsapp" /></a>
+        <div onclick="aparecerRedes()" class="contato"><img src="./images/bater-papo.png" alt="Contato"></div>
+      </div>
+    </footer>
+    <nav>
+      <a>Início</a>
+      <a href="#">Sobre mim</a>
+      <a>Projetos</a>
+      <a>Habilidades</a>
+    </nav>
+  </main>
+
   <script src="./script.js"></script>
 </body>
 

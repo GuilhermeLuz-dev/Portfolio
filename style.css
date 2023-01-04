@@ -1,9 +1,37 @@
+/* Animações */
+@keyframes jumped {
+  50%{bottom: 20px;}
+  100%{bottom:15px;}
+  
+}
+@keyframes appear {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes limited1 {
+  50%{transform: translateX(10%)}
+  100%{transform: translateX(0)}
+}
+@keyframes limited2 {
+  50%{transform: translateX(-10%)}
+  100%{transform: translateX(0)}
+}
+
+/* Sections */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif, Arial, Helvetica;
 }
+
 a{
   list-style: none;
   color: #fff;
@@ -21,15 +49,13 @@ nav {
   position: fixed;
   top: 0;
   font-size: 20px;
-  width: 100%;
+  width:100%;
   height: 50px;
   display: flex;
   justify-content:center;
   align-items: center;
   background: linear-gradient(90deg, #1c0021, #111);
-
 }
-
 
 nav  a {
   width: 110px;
@@ -45,19 +71,14 @@ nav a:hover {
   background-color: rgba(255, 250, 250, 0.219);
 }
 
-.container {
+main{
   max-width: 100%;
   overflow: hidden;
   margin-top: 2%;
 }
-@keyframes jumped {
-  50%{bottom: 20px;}
-  100%{bottom:15px;}
-  
-}
+
 .contato{
   position: fixed;
-  /* position: absolute; */
   background-color:#40ffdc;
   width: 60px;
   height: 60px;
@@ -71,6 +92,7 @@ nav a:hover {
   animation: jumped 1s ease-in-out  infinite;
   cursor: pointer;
 }
+
 .contato  img{
   width: 45px;
 }
@@ -83,25 +105,8 @@ nav a:hover {
   bottom: 15px;
   opacity: 0;
   transition: all 1s;
-
 }
 
-/* Estilizando o header */
-
-/* Animações */
-@keyframes appear {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-/* Seções */
 header {
   height: 100vh;
   position: relative;
@@ -112,24 +117,24 @@ header {
   align-items: center;
 }
 
-.bio {
+.introducao {
   width: 45%;
   font-size: 30px;
 }
 
-.bio>h1 {
+.introducao>h1 {
   opacity: 0;
   animation: appear 1s forwards;
 }
 
-.bio>p {
+.introducao>p {
   opacity: 0;
   animation: appear 1s forwards 1s;
   margin-top: 15px;
   color: #40ffdc;
 }
 
-.bio>button {
+.introducao>button {
   width: 200px;
   border: none;
   border-radius: 5px;
@@ -142,12 +147,9 @@ header {
 
 }
 
-.bio>button:hover {
+.introducao > button:hover {
   width: 250px;
   background: rgba(255, 250, 250, 0.219);
-
-
-
 }
 
 .perfil {
@@ -158,6 +160,7 @@ header {
   justify-items: center;
   align-items: center;
 }
+
 .boxPerfil{
   height: 600px;
   background: linear-gradient(#1c3166, #111);
@@ -167,7 +170,6 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .imagePerfil {
@@ -188,7 +190,6 @@ header {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
-
 }
 
 .redes a img {
@@ -197,11 +198,11 @@ header {
   width: 40px;
   transition: all 1s;
 }
+
 .rede:hover{
   top: -5px;
-  border: 2px solid;
-
 }
+
 .github {
   animation: appear 1s forwards;
 }
@@ -222,9 +223,7 @@ header {
   animation: appear 1s forwards 2s;
 }
 
-/* Sobre Mim */
-
-.sobreMim {
+.biografia {
   display: flex;
   justify-content: space-around;
   background: #1c3166;
@@ -232,8 +231,8 @@ header {
   height: 750px;
   transition: 1s;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
-
 }
+
 .titulo{
   margin: auto;
   position: absolute;
@@ -242,7 +241,6 @@ header {
   left: 50%;
   transform: translateX(-50%);
   color: #40ffdc;
-
 }
 
 .boxBiografia {
@@ -253,7 +251,7 @@ header {
   display: flex;
 }
 
-.biografia {
+.textos {
   overflow: hidden;
   position: relative;
   background-color: #142246;
@@ -265,7 +263,7 @@ header {
   transition: 1s;
 }
 
-#content {
+.textoConteudo {
   position: absolute;
   width: 300%;
   height: 80%;
@@ -274,11 +272,9 @@ header {
   overflow: hidden;
   box-sizing: border-box;
   display: flex;
-
-
 }
 
-#controle {
+.controle {
   position: absolute;
   bottom: 10px;
   width: 20%;
@@ -327,7 +323,7 @@ header {
   background-color: #027fe9;
 }
 
-.imagens {
+.gifs {
   position: relative;
 }
 
@@ -342,7 +338,7 @@ header {
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
 }
 
-#projetos {
+.projetos {
   position: relative;
   margin-top: 100px;
   height: 700px;
@@ -376,43 +372,40 @@ button > img {
   left: 0;
   background: linear-gradient(to left,transparent 0%, black 200%);
 }
+
 .arrow-left:hover{
   opacity: 1;
   }
+
 .arrow-right {
   background: linear-gradient(to right,transparent 0%, black 200%);
   right: 0;
 }
+
 .arrow-right:hover{
   opacity: 1;
   }
+
 .arrow-right > img{
   transform: rotate(180deg);
 }
 
-
-.gallery-wrapper {
+.container-galeria {
   overflow-x: auto;
 }
-.gallery-wrapper::-webkit-scrollbar{
+
+.container-galeria::-webkit-scrollbar{
   display: none;
 }
 
-.gallery {
+.galeria{
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   gap: 15px;
   transition: all 1s ease-in-out;
 }
-@keyframes limited1 {
-  50%{transform: translateX(10%)}
-  100%{transform: translateX(0)}
-}
-@keyframes limited2 {
-  50%{transform: translateX(-10%)}
-  100%{transform: translateX(0)}
-}
+
 .projeto {
   overflow: hidden;
   width: 320px;
@@ -428,15 +421,19 @@ button > img {
   cursor: pointer;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
 }
+
 .projeto:hover{
   border: 4px solid white;
 }
+
 .animation{
 }
+
 .projeto img{
   width: 100px;
 }
-.faixa{
+
+.faixaAguarde{
   background-color:#027fe9;
   width: 200%;
   height: 50px;
@@ -462,15 +459,13 @@ button > img {
   width: 100%;
 }
 
-#habilidades{
+.habilidades{
   height: 1100px;
   position: relative;
   background-color: #1c3166;
   margin-top: 100px;
 }
-#habilidades h2{
-  margin-top: 30px;
-}
+
 .linguagens{
   position: relative;
   width: 70%;
@@ -482,17 +477,14 @@ button > img {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-
-
- 
 }
+
 .linguagem{
   display: inline-block;
   width: 320px;
   height: 420px;
   background-color: #3d0a49;
   border-radius: 10px;
-  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,22 +494,10 @@ button > img {
   transition: all 1s ease-in-out;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
 }
+
 .linguagem:hover{
   background-color: #561066;
-  top: -20px;
-
-}
-.l1{
-  animation: appear 1s ease-in-out .5s forwards;
-}
-.l2{
-  animation: appear 1s ease-in-out 1s forwards;
-}
-.l3{
-  animation: appear 1s ease-in-out 1.5s forwards;
-}
-.l4{
-  animation: appear 1s ease-in-out 2s forwards
+  top:-20px;
 }
 
 .linguagem img{
@@ -531,22 +511,26 @@ footer{
   align-items: center;
   justify-content: center;
 }
+
 .assinatura{
   width: 20%;
   margin: auto;
   text-align: center;
 }
+
 .assinatura h2{
   margin-bottom: 15px;
 }
+
 .assinatura p{
   margin-bottom: 15px;
   color:#40ffdc;
 }
+
 .assinatura .redes{
   margin: auto;
-
 }
+
 .assinatura img{
   width: 30px;
 }
