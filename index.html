@@ -14,8 +14,16 @@
 
 <body>
   <main>
+    <nav>
+        <ul>
+          <li><a href="#intro">Início</a></li>
+          <li><a href="#bio">Biografia</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+        </ul>
+    </nav>
     <header>
-      <section class="introducao">
+      <section id="intro" class="introducao">
         <h1>
           Olá, tudo bem? Sou Guilherme Luz Rocha futuro desenvolvedor de
           software
@@ -50,7 +58,7 @@
       </section>
     </header>
 
-    <section class="biografia">
+    <section id="bio" class="biografia">
       <h1 class="titulo">Biografia</h1>
       <div class="boxBiografia gifs">
         <img class="imgBio" src="./images/livro.gif" alt="Gif" />
@@ -97,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section class="projetos">
+    <section id="projetos" class="projetos">
       <h2 class="titulo">Projetos</h2>
       <div class="container-carrossel">
 
@@ -140,7 +148,7 @@
         <button class="arrow-right control"><img src="./images/proximo.png" alt="Proximo"></button>
       </div>
     </section>
-    <section>
+    <section id="habilidades">
       <div class="habilidades">
         <h2 class="titulo">Habilidades</h2>
         <div class="linguagens">
@@ -196,12 +204,7 @@
         <div onclick="aparecerRedes()" class="contato"><img src="./images/bater-papo.png" alt="Contato"></div>
       </div>
     </footer>
-    <nav>
-      <a>Início</a>
-      <a href="#">Sobre mim</a>
-      <a>Projetos</a>
-      <a>Habilidades</a>
-    </nav>
+  
   </main>
 
   <script src="./script.js"></script>

@@ -17,9 +17,30 @@ const card = document.querySelectorAll('.card');
 // Contatnte para descrições.
 const descricao = document.querySelectorAll(".descricao");
 
-// Contantes para botão de contato fixo
-const contato = document.querySelector(".contato")
-const imgContato = document.querySelectorAll(".imgContato")
+// Contantes para botão de contato fixo.
+const contato = document.querySelector(".contato");
+const imgContato = document.querySelectorAll(".imgContato");
+
+// Constantes para navegação suave na página.
+const navElemento =  document.querySelectorAll("nav li");
+
+
+navElemento.forEach(item =>{
+  item.addEventListener('click', scrollParaId)
+})
+
+function scrollParaId(event){
+  event.preventDefault()
+  const element = event.target;
+  const id = element.getAttribute('href')
+  const to = document.querySelector(id).offsetTop;
+
+  window.scroll({
+    top: to - 60,
+    behavior:"smooth"
+  });
+ 
+}
 
 
 // Funções para efeito de passagem de slide da seção Biografia.
