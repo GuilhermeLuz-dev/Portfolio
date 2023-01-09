@@ -25,6 +25,7 @@ const imgContato = document.querySelectorAll(".imgContato");
 const navElemento =  document.querySelectorAll("nav li");
 
 
+// Função para scroll suave da página.
 navElemento.forEach(item =>{
   item.addEventListener('click', scrollParaId)
 })
