@@ -1,4 +1,27 @@
-// Constantes para efeito de passagem de slide na seção biografia.
+// Função para scroll suave da página.
+
+const navElemento = document.querySelectorAll("nav li");
+
+navElemento.forEach(item => {
+  item.addEventListener('click', scrollParaId)
+})
+
+function scrollParaId(event) {
+  event.preventDefault()
+  const element = event.target;
+  const id = element.getAttribute('href')
+  const to = document.querySelector(id).offsetTop;
+
+  window.scroll({
+    top: to - 60,
+    behavior: "smooth"
+  });
+
+}
+
+
+// Funções para efeito de passagem de slide da seção Biografia.
+
 const slide1 = document.querySelector(".slide1");
 const slide2 = document.querySelector(".slide2");
 const slide3 = document.querySelector(".slide3");
@@ -9,42 +32,6 @@ const textos = document.querySelector(".textos");
 const biografia = document.querySelector(".biografia");
 const imgBio = document.querySelector(".imgBio");
 
-// Constantes para efeito de carrossel na seção de Projetos.
-const controls = document.querySelectorAll('.control');
-const projeto = document.querySelectorAll('.projeto');
-const card = document.querySelectorAll('.card');
-
-// Contatnte para descrições.
-const descricao = document.querySelectorAll(".descricao");
-
-// Contantes para botão de contato fixo.
-const contato = document.querySelector(".contato");
-const imgContato = document.querySelectorAll(".imgContato");
-
-// Constantes para navegação suave na página.
-const navElemento =  document.querySelectorAll("nav li");
-
-
-// Função para scroll suave da página.
-navElemento.forEach(item =>{
-  item.addEventListener('click', scrollParaId)
-})
-
-function scrollParaId(event){
-  event.preventDefault()
-  const element = event.target;
-  const id = element.getAttribute('href')
-  const to = document.querySelector(id).offsetTop;
-
-  window.scroll({
-    top: to - 60,
-    behavior:"smooth"
-  });
- 
-}
-
-
-// Funções para efeito de passagem de slide da seção Biografia.
 const efeitoSlide1 = () => {
   s1.style.marginLeft = "0";
   s1.style.backgroundColor = "#027fe9";
@@ -83,6 +70,11 @@ slide3.addEventListener("click", efeitoSlide3);
 
 // Adicionando efeito de carrossel na seção Projetos.
 
+// Constantes para efeito de carrossel na seção de Projetos.
+const controls = document.querySelectorAll('.control');
+const projeto = document.querySelectorAll('.projeto');
+const card = document.querySelectorAll('.card');
+
 // Variáveis auxiliares
 let margin = 0;
 let index = 1;
@@ -120,7 +112,10 @@ controls.forEach(control => {
   })
 })
 
-// Adicionado uma descrição aos projetos ao passar o mause no mesmo.
+// Adicionado uma descrição aos projetos ao passar o mause pelo mesmo.
+
+const descricao = document.querySelectorAll(".descricao");
+
 card.forEach(card => {
   card.addEventListener("mouseover", () => {
     card.lastElementChild.style.bottom = "0";
@@ -133,23 +128,28 @@ card.forEach(card => {
 })
 
 // Criando efeito no botão fixo onde toda forma de contato pode ser acessada facilmente.
-let aux = 95;
+
+const contato = document.querySelector(".contato");
+const imgContato = document.querySelectorAll(".imgContato");
+let aux = 80;
 const aparecerRedes = () => {
   for (let i = 0; i < imgContato.length; i++) {
     imgContato[i].style.opacity = '1';
     imgContato[i].style.bottom = `${aux}px`;
-    aux += 95;
+    aux += 80;
   }
   contato.setAttribute('onclick', 'desaparecerRedes()')
 }
 const desaparecerRedes = () => {
   for (let i = 0; i < imgContato.length; i++) {
     imgContato[i].style.opacity = "0"
-    imgContato[i].style.bottom = "15px";
-    aux = 95;
+    imgContato[i].style.bottom = "10px";
+    aux = 80;
   }
   contato.setAttribute('onclick', 'aparecerRedes()')
 }
+
+
 
 
 
