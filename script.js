@@ -123,7 +123,7 @@ card.forEach(card => {
 })
 card.forEach(card => {
   card.addEventListener("mouseout", () => {
-    card.lastElementChild.style.bottom = "-90px";
+    card.lastElementChild.style.bottom = "-150px";
   })
 })
 

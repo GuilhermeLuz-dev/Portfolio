@@ -49,8 +49,11 @@
   padding: 0;
   font-family: "Roboto", sans-serif, Arial, Helvetica;
 }
+html{
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar{
-  width: 10px;
+  width: 5px;
   background-color: #1c0021;
 }
 ::-webkit-scrollbar-thumb{
@@ -59,17 +62,17 @@
 
 }
 
-a {
-  list-style: none;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-}
 
 body {
   height: 100vh;
   background: linear-gradient(90deg, #111, 80%, #1c0021);
   color: white;
+}
+a {
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
 }
 
 nav {
@@ -79,13 +82,23 @@ nav {
   width: 100%;
   height: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, #1c0021, #111);
   z-index: 100;
 }
+.logo{
+  position: relative;
+  color: #40ffdc;
+  left: 15px;
+  font-size: 25px;
+}
+nav ul{
+  position: absolute;
+  right: 15px;
+}
 
 nav ul li {
+
   width: 110px;
   height: 50px;
   line-height: 50px;
@@ -93,6 +106,7 @@ nav ul li {
   display: inline-block;
   margin: 0 15px;
   cursor: pointer;
+
 }
 
 nav ul li a {
@@ -210,6 +224,7 @@ header {
   background-color: #fff;
   border-radius: 50%;
   overflow: hidden;
+  margin: auto;
 }
 
 .imagePerfil img {
@@ -481,7 +496,7 @@ button>img {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
-  bottom: -90px;
+  bottom: -150px;
   padding: 10px;
   text-align: center;
   font-weight: 400;
@@ -577,7 +592,6 @@ footer {
 /* Personalização da página 2 */
 .header-cv {
   display: flex;
-  /* background-color: #00a9d4; */
   width: 100%;
   height: 150px;
   align-items: center;
@@ -646,9 +660,17 @@ footer {
   width: 30px;
 }
 
+/* Deixando o site responsivo */
+
 @media (max-width: 1500px){
   .boxTexto{
     font-size: 24px;
+  }
+  .cv img{
+    width: 60%;
+  }
+  .cv img:hover{
+    width:65%;
   }
 }
 
@@ -674,6 +696,12 @@ footer {
   .assinatura{
     width: 30%;
   }
+  .cv img{
+    width: 70%;
+  }
+  .cv img:hover{
+    width:75%;
+  }
 }
 @media (max-width:900px){
   header{
@@ -691,9 +719,19 @@ footer {
     height: 340px;
 
   }
+  .header-cv a button{
+    padding: 20px;
+  }
 }
 
 @media (max-width:780px){
+  .logo{
+    display: none;
+  }
+  nav ul{
+    position: relative;
+    margin: auto;
+  }
   .boxBiografia{
     width: 80%;
   }
@@ -702,7 +740,7 @@ footer {
    
   }
   .habilidades{
-    height: 100vh;
+    height: 120vh;
   }
   .assinatura{
     width: 50%;
@@ -711,6 +749,15 @@ footer {
     width: 250px;
     height: 330px;
 
+  }
+  .cv img{
+    width: 80%;
+  }
+  .cv img:hover{
+    width:85%;
+  }
+  .header-cv a button{
+    padding: 18px;
   }
 }
 
@@ -728,6 +775,9 @@ footer {
   .boxBiografia{
     width: 90%;
   }
+  .controle{
+    width: 30%;
+  }
   .projeto{
     width: 240px;
     height: 340px;
@@ -735,6 +785,15 @@ footer {
   }
   .habilidades{
     height: 150vh;
+  }
+  .cv img{
+    width: 90%;
+  }
+  .cv img:hover{
+    width:95%;
+  }
+  .header-cv a button{
+    padding: 10px;
   }
 }
 
@@ -748,14 +807,23 @@ footer {
   }
   .boxTexto{
     font-size: 20px;
-    background-color: red;
   }
   .projeto{
     width: 220px;
     height: 320px;
   }
+  .cv img{
+    width: 95%;
+  }
+  .cv img:hover{
+    width:100%;
+  }
 }
 @media (max-width:500px){
+   .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
   .linguagens{
     grid-template: auto auto auto/ auto;
 
@@ -770,12 +838,24 @@ footer {
   .assinatura{
     width: 100%;
   }
+  .boxPerfil{
+    width: 350px;
+    height: 460px;
+  }
+  .imagePerfil{
+    width: 300px;
+    height: 300px;
+  }
+  .header-cv a button{
+    padding: 5px;
+  }
+  .header-cv h1{
+    font-size: 30px;
+  }
+
 }
 @media (max-width:400px){
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+ 
   .boxPerfil{
     width: 300px;
     height: 400px;
@@ -783,7 +863,27 @@ footer {
   .imagePerfil{
     width: 250px;
     height: 250px;
-    margin: auto;
+  }
+  .boxBiografia{
+    height:65%;
+  }
+  .boxTexto{
+    font-size: 18px;
+  }
+  .controle{
+    width: 40%;
+  }
+  .projeto{
+    width: 195px;
+    height: 280px;
+  }
+  .descricao{
+    bottom: -150px;
   }
 
+}
+@media (max-width:350px){
+  .boxTexto{
+    font-size: 16px;
+  }
 }
