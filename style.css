@@ -221,7 +221,7 @@ header {
 .imagePerfil {
   width: 350px;
   height: 350px;
-  background-color: #fff;
+  background-color: red;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
