@@ -126,8 +126,8 @@ main {
 .contato {
   position: fixed;
   background-color: #40ffdc;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   right: 15px;
   bottom: 15px;
@@ -140,12 +140,12 @@ main {
 }
 
 .contato img {
-  width: 45px;
+  width: 40px;
 }
 
 .boxContato>a>img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   right: 15px;
   bottom: 15px;
@@ -208,7 +208,7 @@ header {
 }
 
 .boxPerfil {
-  height: 570px;
+  height: 560px;
   background: linear-gradient(#1c3166, #111);
   padding: 20px;
   border-radius: 10px;
@@ -221,7 +221,7 @@ header {
 .imagePerfil {
   width: 350px;
   height: 350px;
-  background-color: red;
+  background-color: #fff;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
@@ -452,11 +452,12 @@ button>img {
   flex-flow: row nowrap;
   gap: 15px;
   transition: all 1s ease-in-out;
+
 }
 
 .projeto {
   overflow: hidden;
-  width: 320px;
+  width: 230px;
   height: 420px;
   flex-shrink: 0;
   transition: all 1s ease-in-out;
@@ -663,6 +664,15 @@ footer {
 /* Deixando o site responsivo */
 
 @media (max-width: 1500px){
+  header h1{
+    font-size:35px;
+  }
+  header p{
+   font-size:20px;
+  }
+  .boxPerfil{
+    height: 500px;
+  }
   .boxTexto{
     font-size: 24px;
   }
@@ -693,6 +703,9 @@ footer {
   .boxBiografia{
     width: 60%;
   }
+  .habilidades{
+    height: 90vh;
+  }
   .assinatura{
     width: 30%;
   }
@@ -715,10 +728,15 @@ footer {
     justify-content: center;
   }
   .projeto{
-    width: 280px;
-    height: 340px;
+    width: 240px;
+    height: 300px;
 
   }
+ 
+  .habilidades{
+    height: 100vh;
+  }
+ 
   .header-cv a button{
     padding: 20px;
   }
@@ -740,7 +758,7 @@ footer {
    
   }
   .habilidades{
-    height: 120vh;
+    height: 130vh;
   }
   .assinatura{
     width: 50%;

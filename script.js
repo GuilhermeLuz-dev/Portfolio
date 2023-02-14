@@ -100,11 +100,10 @@ controls.forEach(control => {
           projeto.style.animation = "limited2 0.5s";
           setTimeout(() => {
             projeto.style.animation = "none";
-          }, 500)
+          }, 100)
         })
       } else {
         margin += -335;
-        console.log(margin)
         projeto[0].style.marginLeft = `${margin}px`;
 
       }
