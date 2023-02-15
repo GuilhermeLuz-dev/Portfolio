@@ -73,46 +73,40 @@ slide3.addEventListener("click", efeitoSlide3);
 // Constantes para efeito de carrossel na seção de Projetos.
 const controls = document.querySelectorAll('.control');
 const projeto = document.querySelectorAll('.projeto');
-const card = document.querySelectorAll('.card');
+const maxProjeto = projeto.length;
+let currentItem = 0;
 
-// Variáveis auxiliares
-let margin = 0;
-let index = 1;
-controls.forEach(control => {
-  let isleft = control.classList.contains('arrow-left'); //Verificando se o controle clicado é o esquerdo.
-  control.addEventListener("click", () => { //Adicionando evento de click aos controles.
-    if (isleft) {
-      if (margin >= 0) { //Adicionando animação caso o limite de projetos seja atingido.
-        projeto.forEach(projeto => {
-          projeto.style.animation = "limited1 0.5s";
-          setTimeout(() => {
-            projeto.style.animation = "none";
-          }, 500)//Retirando animação para evitar bugs.
-        })
-
-      } else { //Caso o limite não tenha exedido, é adicionando margin ao primeiro elemento para criar o efeito de carrossel.
-        margin += 335
-        projeto[0].style.marginLeft = `${margin}px`;
-      }
-    } else { //Caso o botão direito tenha sido clicado é retirado margin para o efeito de retorno. 
-      if (margin <= -670) {
-        projeto.forEach(projeto => { //Animação caso chegue ao limite de projetos.
-          projeto.style.animation = "limited2 0.5s";
-          setTimeout(() => {
-            projeto.style.animation = "none";
-          }, 100)
-        })
-      } else {
-        margin += -335;
-        projeto[0].style.marginLeft = `${margin}px`;
-
-      }
+controls.forEach(control =>{
+  control.addEventListener("click", ()=>{
+    const isleft = control.classList.contains('arrow-left');
+    if(isleft){
+      currentItem -= 1;
+      
+    }else{
+      currentItem += 1;
     }
+    if(currentItem >= maxProjeto){
+      currentItem = 0
+    }
+    if(currentItem < 0){
+      currentItem = maxProjeto - 1
+    }
+
+  projeto.forEach(projeto =>{
+    projeto.classList.remove('current-item')
+  });
+  
+  projeto[currentItem].scrollIntoView({
+    inline: "center",
+    behavior:"smooth",
+    block:"nearest"
+  });
+  projeto[currentItem].classList.add("current-item")
   })
 })
 
 // Adicionado uma descrição aos projetos ao passar o mause pelo mesmo.
-
+const card = document.querySelectorAll("card")
 const descricao = document.querySelectorAll(".descricao");
 
 card.forEach(card => {
