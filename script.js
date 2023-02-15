@@ -106,7 +106,7 @@ controls.forEach(control =>{
 })
 
 // Adicionado uma descrição aos projetos ao passar o mause pelo mesmo.
-const card = document.querySelectorAll("card")
+const card = document.querySelectorAll(".card")
 const descricao = document.querySelectorAll(".descricao");
 
 card.forEach(card => {
@@ -124,12 +124,12 @@ card.forEach(card => {
 
 const contato = document.querySelector(".contato");
 const imgContato = document.querySelectorAll(".imgContato");
-let aux = 80;
+let aux = 70;
 const aparecerRedes = () => {
   for (let i = 0; i < imgContato.length; i++) {
     imgContato[i].style.opacity = '1';
     imgContato[i].style.bottom = `${aux}px`;
-    aux += 80;
+    aux += 70;
   }
   contato.setAttribute('onclick', 'desaparecerRedes()')
 }
@@ -137,7 +137,7 @@ const desaparecerRedes = () => {
   for (let i = 0; i < imgContato.length; i++) {
     imgContato[i].style.opacity = "0"
     imgContato[i].style.bottom = "10px";
-    aux = 80;
+    aux = 70;
   }
   contato.setAttribute('onclick', 'aparecerRedes()')
 }
