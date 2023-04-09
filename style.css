@@ -161,7 +161,7 @@ main {
 
 }
 
-.boxContato a img:hover{
+.boxContato a img:hover {
   border: 2px solid #fff;
 }
 
@@ -221,7 +221,7 @@ header {
 
 .boxPerfil {
   height: 560px;
-  background: linear-gradient(#1c3166, #111);
+  background: linear-gradient(90deg, #1c3166, #111);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
@@ -439,11 +439,13 @@ header {
   overflow: hidden;
   cursor: pointer;
 }
-.projeto img{
+
+.projeto img {
   width: 100px;
 }
+
 .current-item {
-  border: 3px solid #fff;  
+  border: 3px solid #fff;
 }
 
 
@@ -553,7 +555,7 @@ header {
 
 .linguagem:hover {
   top: -20px;
-  
+
 }
 
 .linguagem p {
@@ -686,7 +688,8 @@ footer {
   .boxTexto {
     font-size: 24px;
   }
-  .habilidades{
+
+  .habilidades {
     height: 90vh;
   }
 
@@ -737,7 +740,7 @@ footer {
 }
 
 @media (max-width:900px) {
- 
+
   .introducao {
     width: 70%;
   }
@@ -778,6 +781,7 @@ footer {
   .assinatura {
     width: 50%;
   }
+
   .cv img {
     width: 80%;
   }
@@ -839,7 +843,7 @@ footer {
   .boxTexto {
     font-size: 20px;
   }
-  
+
   .cv img {
     width: 95%;
   }
@@ -911,6 +915,7 @@ footer {
   .controle {
     width: 40%;
   }
+
   .descricao {
     bottom: -150px;
   }
