@@ -516,7 +516,6 @@ header {
 
 
 .habilidades {
-  height: 600px;
   position: relative;
   background-color: #1c3166;
   overflow: hidden;
@@ -540,8 +539,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -690,7 +689,7 @@ footer {
   }
 
   .habilidades {
-    height: 90vh;
+    height: 95vh;
   }
 
   .cv img {
@@ -769,11 +768,6 @@ footer {
     width: 80%;
   }
 
-  .linguagens {
-    grid-template: auto auto/ auto auto;
-
-  }
-
   .habilidades {
     height: 100vh;
   }
@@ -828,6 +822,12 @@ footer {
   .header-cv a button {
     padding: 10px;
   }
+  .habilidades{
+    height: 130vh;
+  }
+  .linguagens{
+    grid-template: auto auto auto / auto auto;
+  }
 }
 
 @media (max-width:550px) {
@@ -859,13 +859,15 @@ footer {
     align-items: center;
   }
 
-  .linguagens {
-    grid-template: auto auto auto/ auto;
-
-  }
-
   .habilidades {
-    height: 130vh;
+    height: 110vh;
+  }
+  .linguagem{
+    width: 150px;
+    height: 150px;
+  }
+  .linguagem img{
+    width: 70px;
   }
 
   .assinatura {
